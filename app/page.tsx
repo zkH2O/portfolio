@@ -215,6 +215,48 @@ export default function Home() {
                 githubUrl="https://github.com/yourusername/bankruptcy-prediction"
               />
             </FadeIn>
+
+            <FadeIn delay={0.5}>
+              <ProjectCard
+                title="PCA Implementation & Visualization"
+                description="Computational implementation of Principal Component Analysis from scratch to visualize high-dimensional feature space and intrinsic data variations."
+                techStack={["Python", "NumPy", "Matplotlib", "Scikit-learn"]}
+                highlights={[
+                  "Built PCA algorithm from first principles using NumPy for eigenvalue/eigenvector computation",
+                  "Applied dimensionality reduction to MNIST dataset, reducing 28x28 images to key components",
+                  "Created interactive visualizations of mean image and principal components showing stroke variation",
+                ]}
+                githubUrl="https://github.com/yourusername/pca-visualization"
+              />
+            </FadeIn>
+
+            <FadeIn delay={0.6}>
+              <ProjectCard
+                title="Cloud-Native Game Server Deployment"
+                description="End-to-end deployment and management of resource-intensive modded Minecraft server on Oracle Cloud Infrastructure using modern DevOps practices."
+                techStack={["Docker", "OCI", "Linux", "Docker Compose", "Networking"]}
+                highlights={[
+                  "Architected containerized deployment using Docker Compose for reproducible, isolated environment",
+                  "Configured multi-layered security with VCN Security Lists, OS-level firewall (UFW), and DNS mapping",
+                  "Debugged and resolved critical InvalidMixinException by analyzing logs and fixing dependency conflicts",
+                ]}
+                githubUrl="https://github.com/yourusername/minecraft-server"
+              />
+            </FadeIn>
+
+            <FadeIn delay={0.7}>
+              <ProjectCard
+                title="AI-Powered Application Assistant"
+                description="Intelligent automation system that programmatically completes job applications through complex ATS platforms using heuristic-based field detection."
+                techStack={["Python", "Selenium", "NLP", "Machine Learning"]}
+                highlights={[
+                  "Engineered heuristic engine using weighted keyword-matching to map form fields to user data",
+                  "Built modular ATS handlers for Workday and Greenhouse with generic fallback for unknown platforms",
+                  "Implemented human-in-the-loop design for CAPTCHA and custom essay questions requiring cognition",
+                ]}
+                githubUrl="https://github.com/yourusername/application-assistant"
+              />
+            </FadeIn>
           </ProjectGrid>
         </SectionContainer>
       </Section>
