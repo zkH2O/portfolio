@@ -6,9 +6,12 @@ import { SectionHeading } from "@/components/Layout/SectionHeading";
 import { ProjectCard } from "@/components/Project/ProjectCard";
 import { ProjectGrid } from "@/components/Project/ProjectGrid";
 import { ExperienceCard } from "@/components/Experience/ExperienceCard";
+import { Timeline, TimelineItem } from "@/components/Experience/Timeline";
 import { SkillsGrid } from "@/components/Skills/SkillsGrid";
 import { SocialLink } from "@/components/UI/SocialLink";
 import { FadeIn } from "@/components/UI/FadeIn";
+import { HeroSection } from "@/components/Hero/HeroSection";
+import { ScrollProjects } from "@/components/Project/ScrollProjects";
 
 export default function Home() {
   const skillsData = [
@@ -37,44 +40,12 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <Section background="light">
-        <SectionContainer>
-          <FadeIn>
-            <div className="text-center py-16">
-              <h1 className="text-7xl md:text-5xl font-bold text-text-primary mb-6">
-                Zigao Zeng
-              </h1>
-              <h2 className="text-2xl md:text-xl text-text-secondary mb-8">
-                Machine Learning Engineer & Developer
-              </h2>
-              <p className="text-lg text-text-primary max-w-3xl mx-auto mb-8 leading-relaxed">
-                UC Davis Computer Science & Statistics student building
-                intelligent, scalable systems. Lead developer at CortexGrade,
-                building AI-native SaaS platforms.
-              </p>
-              <div className="flex gap-6 justify-center">
-                <SocialLink
-                  platform="github"
-                  href="https://github.com/yourusername"
-                />
-                <SocialLink
-                  platform="linkedin"
-                  href="https://www.linkedin.com/in/zeng-zi/"
-                />
-                <SocialLink
-                  platform="email"
-                  href="mailto:zizeng39@gmail.com"
-                />
-              </div>
-            </div>
-          </FadeIn>
-        </SectionContainer>
-      </Section>
+      <HeroSection />
 
       {/* About Me Section */}
       <Section background="dark" id="about">
         <SectionContainer>
-          <FadeIn>
+          <FadeIn direction="left" distance={60}>
             <SectionHeading>About Me</SectionHeading>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-12">
               <div>
@@ -99,172 +70,71 @@ export default function Home() {
       {/* Experience Section */}
       <Section background="light" id="experience">
         <SectionContainer>
-          <FadeIn>
+          <FadeIn direction="left" distance={60}>
             <SectionHeading>Experience</SectionHeading>
           </FadeIn>
 
-          <div className="space-y-8">
-            <FadeIn delay={0.1}>
-              <ExperienceCard
-                company="CortexGrade"
-                role="Full Stack Developer & Architect"
-                dates="January 2024 - June 2025"
-                description="Lead developer architecting an AI-native SaaS platform for automated assignment grading."
-                achievements={[
-                  "Designed and implemented scalable architecture using Python/FastAPI and React, leveraging Celery and Redis for asynchronous distributed task processing of high-throughput grading jobs",
-                  "Developed Intelligent Review Queue with AI-driven confidence scoring, reducing manual review time by a projected 30%",
-                  "Implemented Intelligent Roster feature using fuzzy-matching algorithms for automated data cleaning",
-                  "Built complete monetization pipeline with Stripe integration for two-tier business model, securing payment lifecycle via webhooks",
-                ]}
-              />
-            </FadeIn>
+          <Timeline>
+            <TimelineItem delay={0.1}>
+              <FadeIn delay={0.1}>
+                <ExperienceCard
+                  company="CortexGrade"
+                  role="Full Stack Developer & Architect"
+                  dates="January 2024 - June 2025"
+                  description="Lead developer architecting an AI-native SaaS platform for automated assignment grading."
+                  achievements={[
+                    "Designed and implemented scalable architecture using Python/FastAPI and React, leveraging Celery and Redis for asynchronous distributed task processing of high-throughput grading jobs",
+                    "Developed Intelligent Review Queue with AI-driven confidence scoring, reducing manual review time by a projected 30%",
+                    "Implemented Intelligent Roster feature using fuzzy-matching algorithms for automated data cleaning",
+                    "Built complete monetization pipeline with Stripe integration for two-tier business model, securing payment lifecycle via webhooks",
+                  ]}
+                />
+              </FadeIn>
+            </TimelineItem>
 
-            <FadeIn delay={0.2}>
-              <ExperienceCard
-                company="Ascent"
-                role="Full Stack Software Engineer Intern"
-                dates="July 2022 - September 2023"
-                description="Led critical initiatives spanning front-end architecture, product stability, and AI integration for enterprise clients."
-                achievements={[
-                  "Spearheaded complete redesign of administrative settings portal with dynamic white-labeling theme customization using C#, HTML5, and CSS3",
-                  "Reduced user-reported issue tickets by 25% through proactive bug identification and resolution across front-end application",
-                  "Integrated LLM chatbot into customer support workflow, automating query resolution and enhancing support efficiency",
-                ]}
-              />
-            </FadeIn>
+            <TimelineItem delay={0.2}>
+              <FadeIn delay={0.2}>
+                <ExperienceCard
+                  company="Ascent"
+                  role="Full Stack Software Engineer Intern"
+                  dates="July 2022 - September 2023"
+                  description="Led critical initiatives spanning front-end architecture, product stability, and AI integration for enterprise clients."
+                  achievements={[
+                    "Spearheaded complete redesign of administrative settings portal with dynamic white-labeling theme customization using C#, HTML5, and CSS3",
+                    "Reduced user-reported issue tickets by 25% through proactive bug identification and resolution across front-end application",
+                    "Integrated LLM chatbot into customer support workflow, automating query resolution and enhancing support efficiency",
+                  ]}
+                />
+              </FadeIn>
+            </TimelineItem>
 
-            <FadeIn delay={0.3}>
-              <ExperienceCard
-                company="SVCSA Sports"
-                role="Software Developer Intern"
-                dates="June 2025 - October 2025"
-                description="Re-platformed and stabilized mission-critical legacy infrastructure to unblock development team velocity."
-                achievements={[
-                  "Architected MAMP environment matching legacy production specs, resolving critical authentication incompatibility by strategic database downgrade to MySQL 5.7",
-                  "Diagnosed and eliminated intermittent server, routing, and database failures, transforming non-functional application into reliable testing platform",
-                  "Performed deep-dive debugging into ThinkPHP framework, identifying and patching deprecated function causing catastrophic failures",
-                  "Reduced setup time from days to minutes, unblocking immediate progress on core product features",
-                ]}
-              />
-            </FadeIn>
-          </div>
+            <TimelineItem delay={0.3}>
+              <FadeIn delay={0.3}>
+                <ExperienceCard
+                  company="SVCSA Sports"
+                  role="Software Developer Intern"
+                  dates="June 2025 - October 2025"
+                  description="Re-platformed and stabilized mission-critical legacy infrastructure to unblock development team velocity."
+                  achievements={[
+                    "Architected MAMP environment matching legacy production specs, resolving critical authentication incompatibility by strategic database downgrade to MySQL 5.7",
+                    "Diagnosed and eliminated intermittent server, routing, and database failures, transforming non-functional application into reliable testing platform",
+                    "Performed deep-dive debugging into ThinkPHP framework, identifying and patching deprecated function causing catastrophic failures",
+                    "Reduced setup time from days to minutes, unblocking immediate progress on core product features",
+                  ]}
+                />
+              </FadeIn>
+            </TimelineItem>
+          </Timeline>
         </SectionContainer>
       </Section>
 
-      {/* Projects Section */}
-      <Section background="dark" id="projects">
-        <SectionContainer>
-          <FadeIn>
-            <SectionHeading>Projects</SectionHeading>
-          </FadeIn>
-
-          <ProjectGrid>
-            <FadeIn delay={0.1}>
-              <ProjectCard
-                title="Viral Hunter - AI Content Engine"
-                description="Automated system that transforms top Reddit stories into engaging TikTok videos using AI-powered curation and dynamic word-level subtitles."
-                techStack={["Python", "OpenAI", "Whisper", "FFmpeg", "Reddit API"]}
-                highlights={[
-                  "Built AI-powered content curation using LLM to analyze narrative strength and viral potential",
-                  "Engineered dynamic word-level subtitle system using Whisper timestamps and complex FFmpeg filters",
-                  "Implemented 'Follower Flywheel' engine for multi-part story splitting with automated CTAs",
-                ]}
-                githubUrl="https://github.com/yourusername/viral-hunter"
-              />
-            </FadeIn>
-
-            <FadeIn delay={0.2}>
-              <ProjectCard
-                title="Face Detection Performance Benchmark"
-                description="Rigorous comparative analysis of facial detection models (RetinaFace, Haar Cascade, YOLO) on WIDER FACE dataset."
-                techStack={["Python", "OpenCV", "YOLO", "NumPy", "Google Colab"]}
-                highlights={[
-                  "Evaluated three state-of-the-art detection models against challenging unconstrained benchmark",
-                  "Identified operational envelopes for each model across accuracy, speed, and robustness dimensions",
-                  "Produced quantifiable performance report for production model selection",
-                ]}
-                githubUrl="https://github.com/yourusername/face-detection-benchmark"
-              />
-            </FadeIn>
-
-            <FadeIn delay={0.3}>
-              <ProjectCard
-                title="Interactive 3D Snow Globe"
-                description="Browser-based 3D physics simulation with photorealistic rendering using WebGL and GPU acceleration."
-                techStack={["Three.js", "WebGL", "JavaScript"]}
-                highlights={[
-                  "Architected deterministic particle system modeling thousands of snowflakes in real-time",
-                  "Implemented realistic collision detection and physics simulation pipeline",
-                  "Achieved photorealistic glass rendering using environment mapping, reflection, and refraction",
-                ]}
-                liveUrl="https://yourwebsite.com/snow-globe"
-                githubUrl="https://github.com/yourusername/snow-globe"
-              />
-            </FadeIn>
-
-            <FadeIn delay={0.4}>
-              <ProjectCard
-                title="Corporate Bankruptcy Prediction"
-                description="High-rigor ML classification pipeline predicting financial distress using imbalanced Taiwanese corporate dataset (1999-2009)."
-                techStack={["Python", "Scikit-learn", "XGBoost", "Pandas", "SMOTE"]}
-                highlights={[
-                  "Conducted rigorous evaluation across 8 diverse ML algorithms, identifying SVM as optimal model",
-                  "Applied advanced oversampling techniques (SMOTE/ADASYN) to address severe class imbalance",
-                  "Achieved production-ready model for early warning signals of corporate distress",
-                ]}
-                githubUrl="https://github.com/yourusername/bankruptcy-prediction"
-              />
-            </FadeIn>
-
-            <FadeIn delay={0.5}>
-              <ProjectCard
-                title="PCA Implementation & Visualization"
-                description="Computational implementation of Principal Component Analysis from scratch to visualize high-dimensional feature space and intrinsic data variations."
-                techStack={["Python", "NumPy", "Matplotlib", "Scikit-learn"]}
-                highlights={[
-                  "Built PCA algorithm from first principles using NumPy for eigenvalue/eigenvector computation",
-                  "Applied dimensionality reduction to MNIST dataset, reducing 28x28 images to key components",
-                  "Created interactive visualizations of mean image and principal components showing stroke variation",
-                ]}
-                githubUrl="https://github.com/yourusername/pca-visualization"
-              />
-            </FadeIn>
-
-            <FadeIn delay={0.6}>
-              <ProjectCard
-                title="Cloud-Native Game Server Deployment"
-                description="End-to-end deployment and management of resource-intensive modded Minecraft server on Oracle Cloud Infrastructure using modern DevOps practices."
-                techStack={["Docker", "OCI", "Linux", "Docker Compose", "Networking"]}
-                highlights={[
-                  "Architected containerized deployment using Docker Compose for reproducible, isolated environment",
-                  "Configured multi-layered security with VCN Security Lists, OS-level firewall (UFW), and DNS mapping",
-                  "Debugged and resolved critical InvalidMixinException by analyzing logs and fixing dependency conflicts",
-                ]}
-                githubUrl="https://github.com/yourusername/minecraft-server"
-              />
-            </FadeIn>
-
-            <FadeIn delay={0.7}>
-              <ProjectCard
-                title="AI-Powered Application Assistant"
-                description="Intelligent automation system that programmatically completes job applications through complex ATS platforms using heuristic-based field detection."
-                techStack={["Python", "Selenium", "NLP", "Machine Learning"]}
-                highlights={[
-                  "Engineered heuristic engine using weighted keyword-matching to map form fields to user data",
-                  "Built modular ATS handlers for Workday and Greenhouse with generic fallback for unknown platforms",
-                  "Implemented human-in-the-loop design for CAPTCHA and custom essay questions requiring cognition",
-                ]}
-                githubUrl="https://github.com/yourusername/application-assistant"
-              />
-            </FadeIn>
-          </ProjectGrid>
-        </SectionContainer>
-      </Section>
+      {/* Projects Section - Apple-style Scroll Animation */}
+      <ScrollProjects />
 
       {/* Skills Section */}
       <Section background="light" id="skills">
         <SectionContainer>
-          <FadeIn>
+          <FadeIn direction="left" distance={60}>
             <SectionHeading>Skills</SectionHeading>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -276,7 +146,7 @@ export default function Home() {
       {/* Education Section */}
       <Section background="dark" id="education">
         <SectionContainer>
-          <FadeIn>
+          <FadeIn direction="left" distance={60}>
             <SectionHeading>Education & Certifications</SectionHeading>
           </FadeIn>
 

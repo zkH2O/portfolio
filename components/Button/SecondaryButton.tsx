@@ -10,7 +10,7 @@ export function SecondaryButton({
   onClick,
 }: SecondaryButtonProps) {
   const baseClasses =
-    "border-2 border-sage text-sage font-medium px-8 py-3 rounded-md hover:bg-sage hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2";
+    "border-2 border-sage text-sage font-medium px-8 py-3 rounded-md hover:bg-sage hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2 hover:scale-105 active:scale-95";
 
   if (href) {
     return (

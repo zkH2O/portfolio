@@ -23,20 +23,20 @@ export function ProjectCard({
   highlights = [],
 }: ProjectCardProps) {
   return (
-    <div className="bg-white rounded-xl border border-border-gray overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+    <div className="bg-white rounded-xl border border-border-gray overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-sage/30 group">
       {image && (
         <div className="aspect-video overflow-hidden relative">
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover transition-transform duration-300 hover:scale-105"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       )}
 
       <div className="p-8">
-        <h3 className="text-2xl font-semibold text-text-primary mb-3">
+        <h3 className="text-2xl font-semibold text-text-primary mb-3 group-hover:text-sage transition-colors duration-300">
           {title}
         </h3>
 

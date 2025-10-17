@@ -6,7 +6,7 @@ interface PrimaryButtonProps {
 
 export function PrimaryButton({ children, href, onClick }: PrimaryButtonProps) {
   const baseClasses =
-    "bg-sage text-white font-medium px-8 py-3 rounded-md hover:bg-sage-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2";
+    "bg-sage text-white font-medium px-8 py-3 rounded-md hover:bg-sage-dark transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2 hover:scale-105 active:scale-95";
 
   if (href) {
     return (
