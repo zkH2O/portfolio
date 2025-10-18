@@ -8,6 +8,7 @@ import { ProjectGrid } from "@/components/Project/ProjectGrid";
 import { ExperienceCard } from "@/components/Experience/ExperienceCard";
 import { Timeline, TimelineItem } from "@/components/Experience/Timeline";
 import { SkillsGrid } from "@/components/Skills/SkillsGrid";
+import { ExplodedSkills } from "@/components/Skills/ExplodedSkills";
 import { SocialLink } from "@/components/UI/SocialLink";
 import { FadeIn } from "@/components/UI/FadeIn";
 import { HeroSection } from "@/components/Hero/HeroSection";
@@ -158,7 +159,7 @@ export default function Home() {
             <SectionHeading>Skills</SectionHeading>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <SkillsGrid categories={skillsData} />
+            <ExplodedSkills categories={skillsData} />
           </FadeIn>
         </SectionContainer>
       </Section>
