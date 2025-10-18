@@ -21,36 +21,52 @@ interface Project {
 
 const featuredProjects: Project[] = [
   {
-    title: "CortexGrade",
-    subtitle: "AI-Native SaaS Platform",
+    title: "Face Detection Benchmark",
+    subtitle: "Performance Analysis for Real-World Computer Vision",
     description:
-      "Lead developer architecting an AI-native SaaS platform for automated assignment grading. Built scalable architecture using Python/FastAPI and React, leveraging Celery and Redis for asynchronous distributed task processing.",
-    techStack: ["Python", "FastAPI", "React", "Celery", "Redis", "PostgreSQL"],
-    gradient: "from-blue-500 to-purple-600",
+      "Rigorously benchmarked three state-of-the-art detection models (RetinaFace, Haar Cascade, YOLO) against the challenging WIDER FACE dataset. Identified clear operational envelopes for each model, producing quantifiable performance reports to inform production-ready model selection based on speed, accuracy, and robustness trade-offs.",
+    techStack: ["Python", "OpenCV", "YOLO", "NumPy", "Google Colab"],
+    gradient: "from-blue-500 to-indigo-600",
+  },
+  {
+    title: "PCA Implementation",
+    subtitle: "Computational Data Science & Visualization",
+    description:
+      "Built Principal Component Analysis algorithm from first principles using NumPy for eigenvalue computation. Applied dimensionality reduction to MNIST dataset, visualizing the mean image and principal components to identify primary axes of variation including stroke thickness and slant.",
+    techStack: ["Python", "NumPy", "Matplotlib", "Scikit-learn"],
+    gradient: "from-purple-500 to-pink-600",
+  },
+  {
+    title: "Interactive 3D Snow Globe",
+    subtitle: "Real-Time Physics Simulation",
+    description:
+      "Browser-based 3D application with GPU-accelerated particle physics modeling thousands of snowflakes in real-time. Implemented realistic collision detection and photorealistic glass rendering using environment mapping, reflection, and refraction effects.",
+    techStack: ["Three.js", "WebGL", "JavaScript"],
+    gradient: "from-cyan-500 to-blue-600",
+  },
+  {
+    title: "Corporate Bankruptcy Prediction",
+    subtitle: "High-Rigor ML for Risk Assessment",
+    description:
+      "Developed robust classification pipeline predicting corporate financial distress using Taiwanese corporate dataset (1999-2009). Evaluated eight diverse ML algorithms, identified SVM as optimal model, and applied advanced oversampling techniques (SMOTE/ADASYN) to address severe class imbalance.",
+    techStack: ["Python", "Scikit-learn", "XGBoost", "Pandas", "SMOTE"],
+    gradient: "from-emerald-500 to-teal-600",
   },
   {
     title: "Viral Hunter",
-    subtitle: "AI Content Engine",
+    subtitle: "AI-Powered Content Engine for TikTok",
     description:
-      "Automated system that transforms top Reddit stories into engaging TikTok videos using AI-powered curation and dynamic word-level subtitles. Built AI-powered content curation using LLM to analyze narrative strength and viral potential.",
+      "Automated system transforming top Reddit stories into engaging TikTok videos using AI-powered curation and dynamic word-level subtitles. Engineered LLM-driven content analysis for narrative strength and viral potential, with automated multi-part story splitting and follower growth optimization.",
     techStack: ["Python", "OpenAI", "Whisper", "FFmpeg", "Reddit API"],
-    gradient: "from-pink-500 to-orange-500",
+    gradient: "from-orange-500 to-red-600",
   },
   {
-    title: "Face Detection Benchmark",
-    subtitle: "Performance Analysis",
+    title: "Cloud-Native Game Server",
+    subtitle: "Infrastructure & DevOps on OCI",
     description:
-      "Rigorous comparative analysis of facial detection models (RetinaFace, Haar Cascade, YOLO) on WIDER FACE dataset. Evaluated three state-of-the-art detection models against challenging unconstrained benchmark.",
-    techStack: ["Python", "OpenCV", "YOLO", "NumPy", "Google Colab"],
-    gradient: "from-green-500 to-teal-500",
-  },
-  {
-    title: "3D Snow Globe",
-    subtitle: "Interactive WebGL Experience",
-    description:
-      "Browser-based 3D physics simulation with photorealistic rendering using WebGL and GPU acceleration. Architected deterministic particle system modeling thousands of snowflakes in real-time.",
-    techStack: ["Three.js", "WebGL", "JavaScript"],
-    gradient: "from-cyan-500 to-blue-600",
+      "End-to-end deployment of resource-intensive modded Minecraft server on Oracle Cloud Infrastructure. Architected containerized deployment using Docker Compose, configured multi-layered network security with VCN Security Lists and UFW firewall, and debugged critical server crashes through systematic log analysis.",
+    techStack: ["Docker", "OCI", "Linux", "Docker Compose", "Networking"],
+    gradient: "from-slate-500 to-zinc-600",
   },
 ];
 

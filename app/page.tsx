@@ -12,6 +12,7 @@ import { SocialLink } from "@/components/UI/SocialLink";
 import { FadeIn } from "@/components/UI/FadeIn";
 import { HeroSection } from "@/components/Hero/HeroSection";
 import { ScrollProjects } from "@/components/Project/ScrollProjects";
+import { AnimatedTypography } from "@/components/About/AnimatedTypography";
 
 export default function Home() {
   const skillsData = [
@@ -47,7 +48,26 @@ export default function Home() {
         <SectionContainer>
           <FadeIn direction="left" distance={60}>
             <SectionHeading>About Me</SectionHeading>
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-12">
+          </FadeIn>
+
+          <div className="mt-12 mb-16">
+            <AnimatedTypography
+              words={[
+                { text: "Building" },
+                { text: "intelligent,", highlight: true },
+                { text: "scalable", highlight: true },
+                { text: "systems" },
+                { text: "that" },
+                { text: "solve" },
+                { text: "real-world" },
+                { text: "problems." },
+              ]}
+              className="mb-12"
+            />
+          </div>
+
+          <FadeIn delay={0.3}>
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-12 max-w-4xl">
               <div>
                 <p className="text-lg text-text-primary leading-relaxed mb-4">
                   My passion lies at the intersection of statistics and
