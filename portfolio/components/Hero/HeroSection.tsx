@@ -28,7 +28,7 @@ export function HeroSection() {
       y: 0,
       transition: {
         duration: 1.2,
-        ease: [0.25, 0.4, 0.25, 1], // Apple-style easing
+        ease: [0.25, 0.4, 0.25, 1] as any, // Apple-style easing
       },
     },
   };
@@ -40,7 +40,7 @@ export function HeroSection() {
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as any,
       },
     },
   };
